@@ -1,27 +1,22 @@
-// 🧠 Memory Questions in JavaScript (Hard + Real Interview Style)
-
-// 🔥 1. Stack vs Heap (Trap Based)
-
-// What happens in memory when you declare:
-
 let a = 10;
 let b = a;
 b = 20;
 
-// 👉 Why does a not change?
+console.log(a); // 10 → 'a' is unaffected because b gets a copy of a's value in a separate memory location
+console.log(b); // 20 → 'b' is independent of 'a'
 
-console.log(a) // Output: 10 (because a and b are stored in different memory locations. When we assign b = a, it creates a copy of the value of a and stores it in a different memory location. Therefore, when we change the value of b, it does not affect the value of a.)]
+// Stack vs Heap in JavaScript:
 
-// stack vs heap memory allocation in JavaScript:
+// Stack:
+// - Stores primitive types (number, string, boolean, null, undefined, symbol)
+// - Memory allocated in Last-In-First-Out (LIFO) order
+// - Faster access
 
-// stack: 
-// - used for primitive data types (number, string, boolean, null, undefined, symbol)
-// - memory is allocated in a last-in-first-out (LIFO) manner
-// - faster access
+// Heap:
+// - Stores reference types (objects, arrays, functions)
+// - Memory allocated dynamically
+// - Slower access compared to stack
 
-// heap:
-// - used for reference data types (objects, arrays, functions)
-// - memory is allocated in a random manner
-// - slower access compared to stack
-
-    
+// Key Takeaway:
+// - Primitive types → copied by value → independent variables
+// - Reference types → copied by reference → shared memory
