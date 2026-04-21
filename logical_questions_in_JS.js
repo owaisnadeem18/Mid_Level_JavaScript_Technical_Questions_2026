@@ -62,31 +62,95 @@
 
 // If you want to keep it in a single loop then:
 
-let arr = ["a", "b", "a", "c", "b", "a"];
+// let arr = ["a", "b", "a", "c", "b", "a"];
 
-const countOccurences = (array) => {
+// const countOccurences = (array) => {
 
-    let counts = {}
-    let maxCount = 0
-    let mostFreq = ""
+//     let counts = {}
+//     let maxCount = 0
+//     let mostFreq = ""
 
-    for (let i = 0 ; i < array.length ; i++) {
+//     for (let i = 0 ; i < array.length ; i++) {
         
-        let element = array[i]
+//         let element = array[i]
 
-        counts[element] = (counts[element] || 0) + 1
+//         counts[element] = (counts[element] || 0) + 1
 
-        if (counts[element] > maxCount) {
-            maxCount = counts[element]
-            mostFreq = element    
-        }
+//         if (counts[element] > maxCount) {
+//             maxCount = counts[element]
+//             mostFreq = element    
+//         }
+        
+//     }
+
+//     // return `The most frequent element in array is => "${mostFreq}" and it comes "${maxCount}" times in the array`
+
+//     return { mostFreq , maxCount}
+
+
+// }
+
+// console.log(countOccurences(arr))
+
+// First Non-Repeating Character
+
+// let str = "aabbcde";
+
+// const findFirstNonRepeatingChar = (str) => {
+//     let obj = {}
+//     let nonRepeatingChar = ""
+
+//     for (let i = 0 ; i < str.length ; i++) {
+        
+//         let elem = str[i]
+
+//         obj[elem] = (obj[elem] || 0) + 1        
+
+//     }
+
+//     for (let i in obj) {
+//         if (obj[i] === 1) {
+//                 nonRepeatingChar = i
+//                 return nonRepeatingChar
+//             }
+//     }
+
+
+// }
+
+// console.log(findFirstNonRepeatingChar(str))
+
+// // 👉 Output:
+// "c"
+
+
+let s = "leetcode"
+let arr = s.split("")
+let obj = {}
+
+function firstUniqChar(s) { 
+
+    
+    for (let i = 0 ; i < s.length ; i++) {
+
+        let elem = s[i]
+        
+        obj[elem] = (obj[elem] || 0) + 1   
         
     }
+    
+    for (let i = 0 ; i < s.length ; i++) {
+        
+        if (obj[s[i]] === 1) {
+            
+        return i
 
-    return `The most frequent element in array is => "${mostFreq}" and it comes "${maxCount}" times in the array`
-
-
+    }
 
 }
 
-console.log(countOccurences(arr))
+return -1
+
+}
+
+console.log(firstUniqChar(s))
