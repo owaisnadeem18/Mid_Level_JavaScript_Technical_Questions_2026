@@ -185,3 +185,31 @@
 // };
 
 // console.log(isAnagram(s,t))
+
+// Group Anagrams:
+
+let strs = ["eat","tea","tan","ate","nat","bat"]
+
+let groupAnagrams = function(strs) {
+    
+    let obj = {}
+
+    for (let i = 0 ; i < strs.length ; i++) {
+
+        let str = strs[i]
+
+        let key = str.split("").sort().join("")
+
+        if (!obj[key]) {
+            obj[key] = []
+        }
+
+        obj[key].push(str)
+
+    }
+
+    return Object.values(obj)
+
+};
+
+console.log(groupAnagrams(strs))
