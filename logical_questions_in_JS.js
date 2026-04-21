@@ -124,33 +124,32 @@
 // "c"
 
 
-let s = "leetcode"
-let arr = s.split("")
-let obj = {}
+// let s = "leetcode"
 
-function firstUniqChar(s) { 
-
+// function firstUniqChar(s) { 
     
-    for (let i = 0 ; i < s.length ; i++) {
-
-        let elem = s[i]
-        
-        obj[elem] = (obj[elem] || 0) + 1   
-        
-    }
+//     let obj = {}
     
-    for (let i = 0 ; i < s.length ; i++) {
+//     for (let i = 0 ; i < s.length ; i++) {
+
+//         let elem = s[i]
         
-        if (obj[s[i]] === 1) {
+//         obj[elem] = (obj[elem] || 0) + 1   
+        
+//     }
+    
+//     for (let i = 0 ; i < s.length ; i++) {
+        
+//         if (obj[s[i]] === 1) {
             
-        return i
+//         return i
 
-    }
+//     }
 
-}
+// }
 
-return -1
+// return -1
 
-}
+// }
 
-console.log(firstUniqChar(s))
+// console.log(firstUniqChar(s))
