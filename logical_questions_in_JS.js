@@ -27,6 +27,41 @@
 
 // Now also find out which is the most frequent element in the array , and it's max count:
 
+// let arr = ["a", "b", "a", "c", "b", "a"];
+
+// const countOccurences = (array) => {
+
+//     let counts = {}
+//     let maxCount = 0
+//     let mostFreq = ""
+
+//     for (let i = 0 ; i < array.length ; i++) {
+        
+//         let element = array[i]
+
+//         counts[element] = (counts[element] || 0) + 1
+
+//     }
+
+//     for (let i in counts) {
+
+//         if (counts[i] > maxCount) {
+//             mostFreq = i
+//             maxCount  = counts[i]
+//         } 
+
+//     }
+
+//     return `The most frequent element in array is => "${mostFreq}" and it comes "${maxCount}" times in the array`
+
+
+
+// }
+
+// console.log(countOccurences(arr))
+
+// If you want to keep it in a single loop then:
+
 let arr = ["a", "b", "a", "c", "b", "a"];
 
 const countOccurences = (array) => {
@@ -41,15 +76,11 @@ const countOccurences = (array) => {
 
         counts[element] = (counts[element] || 0) + 1
 
-    }
-
-    for (let i in counts) {
-
-        if (counts[i] > maxCount) {
-            mostFreq = i
-            maxCount  = counts[i]
-        } 
-
+        if (counts[element] > maxCount) {
+            maxCount = counts[element]
+            mostFreq = element    
+        }
+        
     }
 
     return `The most frequent element in array is => "${mostFreq}" and it comes "${maxCount}" times in the array`
