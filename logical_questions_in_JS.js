@@ -153,3 +153,35 @@
 // }
 
 // console.log(firstUniqChar(s))
+
+// ❓ LeetCode 242 — Valid Anagram
+
+// 👉#242
+// ✔ Same frequency compare
+// ✔ MOST IMPORTANT hashing base question
+
+// let s = "anagram"
+// let t = "nagaram"
+
+// let isAnagram = (s, t) => {
+//     if (s.length !== t.length) return false;
+
+//     let map = {};
+
+//     // Step 1: count frequency of s
+//     for (let ch of s) {
+//         map[ch] = (map[ch] || 0) + 1;
+//     }
+
+//     console.log(map)
+
+//     // // Step 2: reduce using t
+//     for (let ch of t) {
+//         if (!map[ch]) return false;
+//         map[ch]--;
+//     }    
+
+//     return map;
+// };
+
+// console.log(isAnagram(s,t))
