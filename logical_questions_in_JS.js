@@ -188,28 +188,61 @@
 
 // Group Anagrams:
 
-let strs = ["eat","tea","tan","ate","nat","bat"]
+// let strs = ["eat","tea","tan","ate","nat","bat"]
 
-let groupAnagrams = function(strs) {
+// let groupAnagrams = function(strs) {
     
-    let obj = {}
+//     let obj = {}
 
-    for (let i = 0 ; i < strs.length ; i++) {
+//     for (let i = 0 ; i < strs.length ; i++) {
 
-        let str = strs[i]
+//         let str = strs[i]
 
-        let key = str.split("").sort().join("")
+//         let key = str.split("").sort().join("")
 
-        if (!obj[key]) {
-            obj[key] = []
+//         if (!obj[key]) {
+//             obj[key] = []
+//         }
+
+//         obj[key].push(str)
+
+//     }
+
+//     return Object.values(obj)
+
+// };
+
+// console.log(groupAnagrams(strs))
+
+// 🧠 Problem: Two Sum
+// 📌 Question:
+
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to the target.
+
+// You cannot use the same element twice
+// You can assume exactly one solution exists
+
+// 🧾 Example 1:
+// Input: nums = [2, 7, 11, 15], target = 9  
+// Output: [0, 1]
+
+let nums = [2, 7, 11, 15]
+
+const findTwoSums = (nums) => {
+    
+    let map = {}
+    let target = 9
+
+    for (let i = 0 ; i < nums.length ; i++) {
+
+        let complement = target - nums[i]
+
+        if (map[complement] !== undefined) {
+            return [map[complement], i]
         }
+        map[nums[i]] = i
+    }       
 
-        obj[key].push(str)
+}   
 
-    }
-
-    return Object.values(obj)
-
-};
-
-console.log(groupAnagrams(strs))
+console.log(findTwoSums(nums))

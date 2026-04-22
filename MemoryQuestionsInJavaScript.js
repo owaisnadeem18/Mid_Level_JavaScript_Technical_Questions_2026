@@ -28,22 +28,22 @@ b = 20;
 // Safe changes	❌ No	✅ Yes
 // Performance	⚡ Fast	🐢 Slower
 
-let user = {
-  name: "Owais",
-  address: {
-    city: "Karachi"
-  }
-};
+// let user = {
+//   name: "Owais",
+//   address: {
+//     city: "Karachi"
+//   }
+// };
 
-let copy = { ...user }; // shallow copy
+// let copy = { ...user }; // shallow copy
 
-copy.name = "Ali"; // top level change
-copy.address.city = "Lahore"; // nested change
+// copy.name = "Ali"; // top level change
+// copy.address.city = "Lahore"; // nested change
 
 // console.log(user.name);        // Owais ✅ (safe)
 // console.log(user.address.city); // Lahore ❌ (changed)
 
-console.log(copy)
+// console.log(copy)
 
 // Shallow Copy vs Deep Copy in JavaScript:
 
