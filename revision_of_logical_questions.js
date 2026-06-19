@@ -40,27 +40,29 @@
 // 3 → 1
 // 4 → 1
 
-arr = [1, 2, 2, 3, 1, 4, 2]
+// arr = [1, 2, 2, 3, 1, 4, 2]
 
-const countOcc = (array) => {
-    const occ = {}
+// const countOcc = (array) => {
+//     const occ = {}
 
-    for (let i = 0 ; i < array.length ; i++) {
+//     for (let i = 0 ; i < array.length ; i++) {
         
-        const item = array[i]
+//         const item = array[i]
 
-        if (!occ[item]) {
-            occ[item] = 1
-        }
+//         if (!occ[item]) {
+//             occ[item] = 1
+//         }
 
-        else {
-            occ[item]++
-        }
+//         else {
+//             occ[item]++
+//         }
 
-    }
+//     }
 
-    return Object.entries(occ)
+//     return Object.entries(occ)
 
-}
+// }
 
-console.log(countOcc(arr))
+// console.log(countOcc(arr))
+
+// Hashmap Questions
