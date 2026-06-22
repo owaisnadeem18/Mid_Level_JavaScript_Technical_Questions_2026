@@ -20,11 +20,12 @@
 // Explanation: The answer is "wke", with the length of 3.
 // Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
-let str = "abcabcbb"
+// let str = "abcabcbb"
 
-const longestSubstring = (string) => {
-    return string
-}
+// const longestSubstring = (string) => {
+//     return string
+// }
 
 
-console.log(longestSubstring(str))
+// console.log(longestSubstring(str))
+
