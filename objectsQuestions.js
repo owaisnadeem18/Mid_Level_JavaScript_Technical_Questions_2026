@@ -13,29 +13,58 @@ const orders = [
 //   2: 400
 // }
 
-const totalAmount = (array) => {
-    const obj = {}
-    let id 
+// const totalAmount = (array) => {
+//     const obj = {}
+//     let id 
 
-    for (let i = 0 ; i < array.length ; i++) {
+//     for (let i = 0 ; i < array.length ; i++) {
         
-        if (array[i]?.status == "paid") {
+//         if (array[i]?.status == "paid") {
         
             
-            id = array[i]?.customerId
+//             id = array[i]?.customerId
 
-        if (!obj[id]) {
-            obj[id] = 0
-        }
+//         if (!obj[id]) {
+//             obj[id] = 0
+//         }
 
-        obj[id] += array[i]?.amount
+//         obj[id] += array[i]?.amount
         
-        }
+//         }
 
-    }
+//     }
 
-    return obj
+//     return obj
 
-}
+// }
 
-console.log(totalAmount(orders))
+// console.log(totalAmount(orders))
+
+// const totalAmount  = (array) => {
+    
+//     let obj = {}
+//     let key
+
+//     array.forEach((item) => {
+        
+//         if (item?.status == "paid") {
+        
+//             key = item?.customerId
+            
+//             if (!obj[key]) {
+//                 obj[key] = 0
+//             }
+
+//             obj[key] += item?.amount
+
+//         }
+
+        
+
+//     })
+
+//     return obj
+
+// }
+
+// console.log(totalAmount(orders))
