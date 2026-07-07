@@ -103,13 +103,13 @@ const users = [
 // console.log(countTotalDeptSalaries(employees))
 
 
-const employees = [
-  { name: "Ali", department: "IT", salary: 50000 },
-  { name: "Ahmed", department: "HR", salary: 30000 },
-  { name: "Sara", department: "IT", salary: 40000 },
-  { name: "Ayesha", department: "HR", salary: 35000 },
-  { name: "Zain", department: "Sales", salary: 60000 }
-];
+// const employees = [
+//   { name: "Ali", department: "IT", salary: 50000 },
+//   { name: "Ahmed", department: "HR", salary: 30000 },
+//   { name: "Sara", department: "IT", salary: 40000 },
+//   { name: "Ayesha", department: "HR", salary: 35000 },
+//   { name: "Zain", department: "Sales", salary: 60000 }
+// ];
 
 // expected output:
 
@@ -119,24 +119,59 @@ const employees = [
 //   Sales: 1
 // }
 
-const countEmployeesDeptWise = (arr) => {
+// const countEmployeesDeptWise = (arr) => {
     
-    let obj = {}
-    let key 
+//     let obj = {}
+//     let key 
     
-    arr.forEach((item) => {
-        key = item?.department 
+//     arr.forEach((item) => {
+//         key = item?.department 
         
+//         if (!obj[key]) {
+//             obj[key] = 0
+//         } 
+        
+//         obj[key]++
+        
+//     })
+    
+//     return obj
+    
+// }
+
+// console.log(countEmployeesDeptWise(employees))
+
+const marks = [
+  { student: "Ali", marks: 80 },
+  { student: "Ahmed", marks: 70 },
+  { student: "Ali", marks: 90 },
+  { student: "Ahmed", marks: 60 },
+  { student: "Sara", marks: 95 }
+];
+
+// {
+//   Ali:170,
+//   Ahmed:130,
+//   Sara:95
+// }
+
+const findStudentTotalMarks = (arr) => {
+    let obj = {}
+    let key
+
+    arr.forEach((item) => {
+        key = item?.student
+
         if (!obj[key]) {
             obj[key] = 0
-        } 
-        
-        obj[key]++
-        
+        }
+
+        obj[key] += item?.marks
+
     })
-    
+
     return obj
-    
+
 }
 
-console.log(countEmployeesDeptWise(employees))
+console.log(findStudentTotalMarks(marks))
