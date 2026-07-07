@@ -264,3 +264,31 @@ const users = [
 // } )
 
 // console.log(obj)
+
+const sent = "hello world man"
+
+const countOcc = (arr) => {
+    let obj = {}
+
+    arr.toLowerCase().split("").forEach((item) => {
+        
+        
+        key = item
+
+        if ( item !== " " ) {
+            
+            if (!obj[key]) {
+                obj[key] = 1        
+            }
+
+            obj[key]++
+        
+        }
+    
+    })
+
+    return obj
+
+}
+
+console.log(countOcc(sent))
