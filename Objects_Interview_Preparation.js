@@ -214,3 +214,35 @@ const users = [
 // } 
 
 // console.log(highestSpender(purchases))
+
+const employees = [
+  { name: "Ali", department: "IT" },
+  { name: "Ahmed", department: "HR" },
+  { name: "Sara", department: "IT" },
+  { name: "Ayesha", department: "HR" },
+  { name: "Zain", department: "Sales" }
+];
+
+// expected output:
+
+// {
+//   IT: ["Ali", "Sara"],
+//   HR: ["Ahmed", "Ayesha"],
+//   Sales: ["Zain"]
+// }
+
+let obj = {}
+let key
+
+employees.forEach((item) => {
+    key = item?.department
+
+    if (!obj[key]) {
+        obj[key] = []
+    }
+
+    obj[key].push(item?.name)
+
+})
+
+console.log(obj)
