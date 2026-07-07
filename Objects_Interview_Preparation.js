@@ -65,6 +65,44 @@ const users = [
 
 // console.log(countActiveUsers(users))
 
+// const employees = [
+//   { name: "Ali", department: "IT", salary: 50000 },
+//   { name: "Ahmed", department: "HR", salary: 30000 },
+//   { name: "Sara", department: "IT", salary: 40000 },
+//   { name: "Ayesha", department: "HR", salary: 35000 },
+//   { name: "Zain", department: "Sales", salary: 60000 }
+// ];
+
+// // expected output:
+// // {
+// //   IT: 90000,
+// //   HR: 65000,
+// //   Sales: 60000
+// // }
+
+// const countTotalDeptSalaries = (employees) => {
+    
+//     let obj = {}
+//     let id
+    
+//     employees.forEach((item) => {
+//         id = item?.department
+
+//         if (!obj[id]) {
+//             obj[id] = 0
+//         }
+
+//         obj[id] += item?.salary
+
+//     })
+
+//     return obj
+
+// }
+
+// console.log(countTotalDeptSalaries(employees))
+
+
 const employees = [
   { name: "Ali", department: "IT", salary: 50000 },
   { name: "Ahmed", department: "HR", salary: 30000 },
@@ -74,30 +112,31 @@ const employees = [
 ];
 
 // expected output:
+
 // {
-//   IT: 90000,
-//   HR: 65000,
-//   Sales: 60000
+//   IT: 2,
+//   HR: 2,
+//   Sales: 1
 // }
 
-const countTotalDeptSalaries = (employees) => {
+const countEmployeesDeptWise = (arr) => {
     
     let obj = {}
-    let id
+    let key 
     
-    employees.forEach((item) => {
-        id = item?.department
-
-        if (!obj[id]) {
-            obj[id] = 0
-        }
-
-        obj[id] += item?.salary
-
+    arr.forEach((item) => {
+        key = item?.department 
+        
+        if (!obj[key]) {
+            obj[key] = 0
+        } 
+        
+        obj[key]++
+        
     })
-
+    
     return obj
-
+    
 }
 
-console.log(countTotalDeptSalaries(employees))
+console.log(countEmployeesDeptWise(employees))
