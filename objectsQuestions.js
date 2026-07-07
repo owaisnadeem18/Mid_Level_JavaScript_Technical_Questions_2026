@@ -68,3 +68,31 @@ const orders = [
 // }
 
 // console.log(totalAmount(orders))
+
+// again practice of same question:
+
+const totalAmount = (arr) => {
+    
+    let obj = {}
+    let id 
+
+    arr.forEach((item) => {
+        
+        if (item?.status?.toLowerCase() == "paid") {
+            id = item?.customerId
+
+            if (!obj[id]) {
+                obj[id] = 0
+            }
+
+            obj[id] += item?.amount
+
+        }
+
+    })
+
+    return obj
+
+}
+
+console.log(totalAmount(orders))
