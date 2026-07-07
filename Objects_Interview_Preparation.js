@@ -246,3 +246,21 @@ const users = [
 // })
 
 // console.log(obj)
+
+// count occurences  
+
+// const sentence = "owais";
+
+// let obj = {}
+// let key
+
+// sentence.toLowerCase().split("").forEach((item) => {
+//     key = item
+
+//     if (!obj[key]) {
+//         obj[key] = 0
+//     }
+//     obj[key]++
+// } )
+
+// console.log(obj)
