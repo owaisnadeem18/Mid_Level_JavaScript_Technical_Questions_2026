@@ -278,7 +278,7 @@ const countOcc = (arr) => {
         if ( item !== " " ) {
             
             if (!obj[key]) {
-                obj[key] = 1        
+                obj[key] = 0
             }
 
             obj[key]++
