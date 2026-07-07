@@ -141,37 +141,76 @@ const users = [
 
 // console.log(countEmployeesDeptWise(employees))
 
-const marks = [
-  { student: "Ali", marks: 80 },
-  { student: "Ahmed", marks: 70 },
-  { student: "Ali", marks: 90 },
-  { student: "Ahmed", marks: 60 },
-  { student: "Sara", marks: 95 }
-];
+// const marks = [
+//   { student: "Ali", marks: 80 },
+//   { student: "Ahmed", marks: 70 },
+//   { student: "Ali", marks: 90 },
+//   { student: "Ahmed", marks: 60 },
+//   { student: "Sara", marks: 95 }
+// ];
 
-// {
-//   Ali:170,
-//   Ahmed:130,
-//   Sara:95
+// // {
+// //   Ali:170,
+// //   Ahmed:130,
+// //   Sara:95
+// // }
+
+// const findStudentTotalMarks = (arr) => {
+//     let obj = {}
+//     let key
+
+//     arr.forEach((item) => {
+//         key = item?.student
+
+//         if (!obj[key]) {
+//             obj[key] = 0
+//         }
+
+//         obj[key] += item?.marks
+
+//     })
+
+//     return obj
+
 // }
 
-const findStudentTotalMarks = (arr) => {
-    let obj = {}
-    let key
+// console.log(findStudentTotalMarks(marks))
 
-    arr.forEach((item) => {
-        key = item?.student
+// const purchases = [
+//   { customer: "Ali", amount: 500 },
+//   { customer: "Ahmed", amount: 1200 },
+//   { customer: "Ali", amount: 700 },
+//   { customer: "Sara", amount: 900 }
+// ];
 
-        if (!obj[key]) {
-            obj[key] = 0
-        }
+// const highestSpender = (arr) => {
+//     let obj = {}
+//     let key
+//     let highestSpender = ""
+//     let highestAmountSpent = 0
+    
+//     arr.forEach((item) => {
+//         key = item?.customer
+//         if (!obj[key]) {
+//             obj[key] = 0
+//         }
+        
+//         obj[key] += item?.amount
+        
+//     })
+    
+//     for (let i in obj) {
+        
+//         if (obj[i] > highestAmountSpent) {
+//             highestAmountSpent = obj[i]
+//             highestSpender = i
+//         }
+        
+        
+//     }
+    
+//     return highestSpender
+    
+// } 
 
-        obj[key] += item?.marks
-
-    })
-
-    return obj
-
-}
-
-console.log(findStudentTotalMarks(marks))
+// console.log(highestSpender(purchases))
