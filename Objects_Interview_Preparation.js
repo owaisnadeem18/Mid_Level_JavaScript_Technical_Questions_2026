@@ -265,30 +265,65 @@ const users = [
 
 // console.log(obj)
 
-const sent = "hello world man"
+// const sent = "hello world man"
 
-const countOcc = (arr) => {
-    let obj = {}
+// const countOcc = (arr) => {
+//     let obj = {}
 
-    arr.toLowerCase().split("").forEach((item) => {
+//     arr.toLowerCase().split("").forEach((item) => {
         
         
-        key = item
+//         key = item
 
-        if ( item !== " " ) {
+//         if ( item !== " " ) {
             
-            if (!obj[key]) {
-                obj[key] = 0
-            }
+//             if (!obj[key]) {
+//                 obj[key] = 0
+//             }
 
-            obj[key]++
+//             obj[key]++
         
-        }
+//         }
     
-    })
+//     })
 
-    return obj
+//     return obj
+
+// }
+
+// console.log(countOcc(sent))
+
+const words = [
+  "apple",
+  "banana",
+  "kiwi",
+  "mango",
+  "strawberry",
+];
+
+const countlongestFruit = (arr) => {
+    let obj = {}
+    let key
+    let longestFruit = ""
+    
+    arr.forEach((item) => {
+        key = item
+        if (!obj[key]) {
+            obj[key] = 0
+        }
+
+        obj[key]++
+    
+    } )
+
+    for (let i in obj) {
+        if (i.length > longestFruit.length) {
+            longestFruit = i
+        }
+    }
+
+    return longestFruit
 
 }
 
-console.log(countOcc(sent))
+console.log(countlongestFruit(words))
