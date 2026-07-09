@@ -301,29 +301,43 @@ const words = [
   "strawberry",
 ];
 
-const countlongestFruit = (arr) => {
-    let obj = {}
-    let key
-    let longestFruit = ""
+// const countlongestFruit = (arr) => {
+//     let obj = {}
+//     let key
+//     let longestFruit = ""
     
-    arr.forEach((item) => {
-        key = item
-        if (!obj[key]) {
-            obj[key] = 0
-        }
+//     arr.forEach((item) => {
+//         key = item
+//         if (!obj[key]) {
+//             obj[key] = 0
+//         }
 
-        obj[key]++
+//         obj[key]++
     
-    } )
+//     } )
 
-    for (let i in obj) {
-        if (i.length > longestFruit.length) {
-            longestFruit = i
+//     for (let i in obj) {
+//         if (i.length > longestFruit.length) {
+//             longestFruit = i
+//         }
+//     }
+
+//     return longestFruit
+
+// }
+
+// console.log(countlongestFruit(words))
+
+const longestFruit = (arr) => {
+    let longestStr = ""
+    for (let i of arr) {
+        if (i.length > longestStr.length) {
+            longestStr = i
         }
     }
 
-    return longestFruit
+    return longestStr
 
 }
 
-console.log(countlongestFruit(words))
+console.log(longestFruit(words))
